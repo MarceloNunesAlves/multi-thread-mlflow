@@ -103,7 +103,7 @@ if __name__ == '__main__':
     client = MlflowClient()
 
     count = 1
-    executor = ThreadPoolExecutor(max_workers=1)
+    executor = ThreadPoolExecutor(max_workers=3)
     for x in runs:
         executor.submit(do_something_in_parallel)
         logger.info('Item enviado -> {}'.format(count))
